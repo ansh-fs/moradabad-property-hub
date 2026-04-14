@@ -1,7 +1,7 @@
 import { MapPin, Headphones, Shield, FileText, Users } from "lucide-react";
 
 const items = [
-  { icon: MapPin, label: "Local Moradabad Experts" },
+  { icon: MapPin, label: "Local Property Experts" },
   { icon: Headphones, label: "Fast Response Support" },
   { icon: Shield, label: "Professional Management" },
   { icon: FileText, label: "Transparent Reporting" },

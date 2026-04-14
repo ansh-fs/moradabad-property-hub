@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 
 const propertyTypes = ["Flat/Apartment", "Independent House", "Society", "Commercial", "Plot/Land"];
-const areas = ["New Moradabad", "Buddhi Vihar", "Ramganga Vihar", "Kashiram Nagar", "Awas Vikas", "Other"];
+const areas = ["City Center", "Residential Colony", "Gated Society", "Industrial Area", "Suburban", "Other"];
 const services = ["Society Management", "Rental Management", "Tenant Management", "Property Maintenance", "Flat Sale/Resale", "Rent Collection", "Other"];
 
 interface LeadFormProps {
