@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   { q: "How does property management work?", a: "We take complete responsibility for your property — from tenant management and rent collection to maintenance and reporting. You relax while we handle everything professionally." },
   { q: "Do you manage rental tenants?", a: "Yes! We handle tenant screening, agreement preparation, move-in/move-out, complaint resolution, and regular communication with tenants on your behalf." },
-  { q: "Which areas do you cover?", a: "We serve all major areas in Moradabad including New Moradabad, Buddhi Vihar, Ramganga Vihar, Kashiram Nagar, Awas Vikas, and other residential societies." },
+  { q: "Which areas do you cover?", a: "We serve all major residential areas and societies. Contact us to check if your property falls within our service area." },
   { q: "How quickly can services start?", a: "Once you submit your enquiry and we complete the property review, services can begin within 3-5 working days." },
   { q: "How do I contact you?", a: "You can fill the enquiry form on this page, call us directly, or reach out via WhatsApp. We respond within a few hours!" },
 ];

@@ -1,0 +1,82 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
+import LeadForm from "@/components/LeadForm";
+import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Contact = () => (
+  <div className="min-h-screen">
+    <Header />
+
+    <section className="pt-28 pb-16 gradient-navy">
+      <div className="container-narrow px-4 text-center">
+        <span className="text-gold font-medium text-sm uppercase tracking-wider">Contact Us</span>
+        <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground mt-3 mb-4">
+          Get in <span className="text-gradient-gold">Touch</span>
+        </h1>
+        <p className="text-primary-foreground/70 max-w-2xl mx-auto">Have questions or ready to get started? Reach out to Rohit Thakur & Hemant Thakur's team.</p>
+      </div>
+    </section>
+
+    <section className="section-padding bg-background">
+      <div className="container-narrow">
+        <div className="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="font-heading font-bold text-foreground text-2xl mb-6">Send Us an Enquiry</h2>
+            <div className="bg-card p-6 rounded-xl border border-border shadow-md">
+              <LeadForm variant="hero" />
+            </div>
+          </div>
+
+          <div>
+            <h2 className="font-heading font-bold text-foreground text-2xl mb-6">Contact Information</h2>
+            <div className="space-y-6">
+              {[
+                { icon: Phone, title: "Phone", info: "+91 XXXXX XXXXX", action: "tel:+91XXXXXXXXXX" },
+                { icon: MessageCircle, title: "WhatsApp", info: "Chat with us instantly", action: "https://wa.me/91XXXXXXXXXX" },
+                { icon: Mail, title: "Email", info: "info@propertysolution.com", action: "mailto:info@propertysolution.com" },
+                { icon: MapPin, title: "Office", info: "Uttar Pradesh, India", action: null },
+                { icon: Clock, title: "Working Hours", info: "Mon - Sat: 9:00 AM - 7:00 PM", action: null },
+              ].map(({ icon: Icon, title, info, action }) => (
+                <div key={title} className="flex items-start gap-4 bg-card rounded-xl p-5 border border-border">
+                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+                    <Icon size={22} className="text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold text-foreground text-sm">{title}</h3>
+                    {action ? (
+                      <a href={action} target={action.startsWith("http") ? "_blank" : undefined} className="text-muted-foreground text-sm hover:text-accent transition-colors">
+                        {info}
+                      </a>
+                    ) : (
+                      <p className="text-muted-foreground text-sm">{info}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <Button
+                size="lg"
+                className="w-full bg-[#25D366] text-white font-semibold py-6 hover:bg-[#22c55e] transition-colors"
+                onClick={() => window.open("https://wa.me/91XXXXXXXXXX", "_blank")}
+              >
+                <MessageCircle className="mr-2" size={20} />
+                WhatsApp Us Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+    <FloatingWhatsApp />
+    <StickyMobileCTA />
+  </div>
+);
+
+export default Contact;

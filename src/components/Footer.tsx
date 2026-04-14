@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Users } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-foreground text-primary-foreground">
@@ -14,15 +14,19 @@ const Footer = () => (
               <p className="text-xs text-primary-foreground/60">& Investment</p>
             </div>
           </div>
-          <p className="text-primary-foreground/60 text-sm leading-relaxed">
-            Moradabad's trusted property and society management company. Professional, transparent, and reliable.
+          <p className="text-primary-foreground/60 text-sm leading-relaxed mb-4">
+            Your trusted property and society management company. Professional, transparent, and reliable.
           </p>
+          <div className="flex items-center gap-2 text-primary-foreground/50 text-xs">
+            <Users size={14} className="text-gold" />
+            <span>Founded by <strong className="text-primary-foreground/80">Rohit Thakur</strong> & <strong className="text-primary-foreground/80">Hemant Thakur</strong></span>
+          </div>
         </div>
 
         <div>
           <h4 className="font-heading font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/60">
-            {["Home", "Services", "Areas We Serve", "About", "Testimonials", "Contact"].map((link) => (
+            {["Home", "Services", "Properties", "About", "Testimonials", "Contact"].map((link) => (
               <li key={link}>
                 <button
                   onClick={() => document.getElementById(link.toLowerCase().replace(/\s+/g, "-"))?.scrollIntoView({ behavior: "smooth" })}
@@ -49,7 +53,7 @@ const Footer = () => (
           <ul className="space-y-3 text-sm text-primary-foreground/60">
             <li className="flex items-center gap-2"><Phone size={16} className="text-gold" /> +91 XXXXX XXXXX</li>
             <li className="flex items-center gap-2"><Mail size={16} className="text-gold" /> info@propertysolution.com</li>
-            <li className="flex items-start gap-2"><MapPin size={16} className="text-gold mt-0.5" /> Moradabad, Uttar Pradesh, India</li>
+            <li className="flex items-start gap-2"><MapPin size={16} className="text-gold mt-0.5" /> Uttar Pradesh, India</li>
           </ul>
         </div>
       </div>

@@ -18,7 +18,7 @@ const ServicesSection = () => (
       <div className="text-center mb-12">
         <span className="text-accent font-medium text-sm uppercase tracking-wider">What We Offer</span>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Our Services</h2>
-        <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">Comprehensive property management solutions tailored for Moradabad's property owners.</p>
+        <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">Comprehensive property management solutions tailored for property owners.</p>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map(({ icon: Icon, title, desc }) => (

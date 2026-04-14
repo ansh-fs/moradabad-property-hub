@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0">
-        <img src={heroBg} alt="Premium property in Moradabad" className="w-full h-full object-cover" />
+        <img src={heroBg} alt="Premium property management" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/85 to-navy/60" />
       </div>
 
@@ -15,10 +15,10 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="animate-fade-up">
             <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 text-gold text-sm font-medium mb-6 border border-gold/30">
-              #1 Property Management in Moradabad
+              #1 Trusted Property Management
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] leading-tight font-bold text-primary-foreground mb-6">
-              Moradabad's Trusted Property & Society Management{" "}
+              Your Trusted Property & Society Management{" "}
               <span className="text-gradient-gold">Experts</span>
             </h1>
             <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-8 max-w-lg">

@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import AreasSection from "@/components/AreasSection";
+import FeaturedProperties from "@/components/AreasSection";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CaseStudySection from "@/components/CaseStudySection";
@@ -20,7 +20,7 @@ const Index = () => (
     <TrustStrip />
     <ServicesSection />
     <WhyChooseUs />
-    <AreasSection />
+    <FeaturedProperties />
     <ProcessSection />
     <TestimonialsSection />
     <CaseStudySection />

@@ -1,7 +1,7 @@
 import { MapPin, Headphones, Wrench, MessageSquare, Users } from "lucide-react";
 
 const reasons = [
-  { icon: MapPin, title: "Local Moradabad Experience", desc: "Deep knowledge of local property market, societies, and tenant preferences." },
+  { icon: MapPin, title: "Local Property Experience", desc: "Deep knowledge of the local property market, societies, and tenant preferences." },
   { icon: Headphones, title: "Fast Tenant Support", desc: "Quick response to tenant queries and issues, ensuring smooth operations." },
   { icon: Wrench, title: "Reliable Maintenance", desc: "Trusted network of service providers for all types of property maintenance." },
   { icon: MessageSquare, title: "Transparent Communication", desc: "Regular updates and clear reporting so you always know what's happening." },
