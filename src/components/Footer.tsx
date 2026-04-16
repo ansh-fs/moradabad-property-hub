@@ -58,6 +58,22 @@ const Footer = () => (
         </div>
       </div>
 
+      <div className="mb-12">
+        <h4 className="font-heading font-semibold text-primary-foreground mb-4">Visit Our Office</h4>
+        <div className="rounded-xl overflow-hidden border border-primary-foreground/10">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.823!2d78.7733!3d28.8386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390afce700000001%3A0x1!2sProperty+Solution+%26+Investment!5e0!3m2!1sen!2sin!4v1700000000000"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Property Solution & Investment Office Location"
+          />
+        </div>
+      </div>
+
       <div className="border-t border-primary-foreground/10 pt-6 text-center text-xs text-primary-foreground/40">
         © {new Date().getFullYear()} Property Solution & Investment. All rights reserved.
       </div>
