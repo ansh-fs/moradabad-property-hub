@@ -28,7 +28,7 @@ const HeroSection = () => {
             </p>
             <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
               Led by <span className="text-gold font-semibold">Rohit Thakur</span> (Founder & Director) and{" "}
-              <span className="text-gold font-semibold">Hement Thakur</span> (Co-Founder & Operations Head), we help property owners manage, rent, maintain, and grow their property value with professional management services.
+              <span className="text-gold font-semibold">Hement Thakur</span> (Founder & Director), we help property owners manage, rent, maintain, and grow their property value with professional management services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -73,12 +73,12 @@ const HeroSection = () => {
                   <div className="absolute inset-0 rounded-full bg-accent/20 blur-2xl group-hover:bg-accent/40 transition-colors duration-500" />
                   <img
                     src={hemantImg}
-                    alt="Hement Thakur - Co-Founder & Operations Head"
+                    alt="Hement Thakur - Founder & Director"
                     className="relative w-full h-full rounded-full object-cover object-top border-4 border-accent/50 shadow-2xl group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="text-primary-foreground font-heading font-bold text-lg">Hement Thakur</h3>
-                <p className="text-gold text-sm font-medium">Co-Founder & Operations Head</p>
+                <p className="text-gold text-sm font-medium">Founder & Director</p>
               </div>
             </div>
           </div>
