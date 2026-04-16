@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LeadForm from "./LeadForm";
+import rohitImg from "@/assets/rohit-thakur.png";
+import hemantImg from "@/assets/hemant-thakur.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -8,21 +9,26 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0">
         <img src={heroBg} alt="Premium property management" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/85 to-navy/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/90 to-navy/70" />
       </div>
 
       <div className="relative z-10 container-narrow px-4 py-12 md:py-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Left: Text Content */}
           <div className="animate-fade-up">
             <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 text-gold text-sm font-medium mb-6 border border-gold/30">
-              #1 Trusted Property Management
+              Property Management and Solution
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] leading-tight font-bold text-primary-foreground mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] leading-tight font-bold text-primary-foreground mb-4">
               Your Trusted Property & Society Management{" "}
               <span className="text-gradient-gold">Experts</span>
             </h1>
+            <p className="text-accent font-medium text-lg italic mb-4">
+              "बनाये अपने निवेश को बेहतर"
+            </p>
             <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
-              We help property owners manage, rent, maintain, and grow their property value with professional management services.
+              Led by <span className="text-gold font-semibold">Rohit Thakur</span> (Founder & Director) and{" "}
+              <span className="text-gold font-semibold">Hement Thakur</span> (Co-Founder & Operations Head), we help property owners manage, rent, maintain, and grow their property value with professional management services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -44,8 +50,37 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="animate-fade-up-delay-2">
-            <LeadForm variant="hero" />
+          {/* Right: Founders Photos */}
+          <div className="animate-fade-up-delay-2 flex flex-col items-center gap-6">
+            <div className="relative flex flex-col sm:flex-row items-center gap-6">
+              {/* Rohit */}
+              <div className="text-center group">
+                <div className="relative w-44 h-44 md:w-52 md:h-52 mx-auto mb-3">
+                  <div className="absolute inset-0 rounded-full bg-accent/20 blur-2xl group-hover:bg-accent/40 transition-colors duration-500" />
+                  <img
+                    src={rohitImg}
+                    alt="Rohit Thakur - Founder & Director"
+                    className="relative w-full h-full rounded-full object-cover object-top border-4 border-accent/50 shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-primary-foreground font-heading font-bold text-lg">Rohit Thakur</h3>
+                <p className="text-gold text-sm font-medium">Founder & Director</p>
+              </div>
+
+              {/* Hement */}
+              <div className="text-center group">
+                <div className="relative w-44 h-44 md:w-52 md:h-52 mx-auto mb-3">
+                  <div className="absolute inset-0 rounded-full bg-accent/20 blur-2xl group-hover:bg-accent/40 transition-colors duration-500" />
+                  <img
+                    src={hemantImg}
+                    alt="Hement Thakur - Co-Founder & Operations Head"
+                    className="relative w-full h-full rounded-full object-cover object-top border-4 border-accent/50 shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-primary-foreground font-heading font-bold text-lg">Hement Thakur</h3>
+                <p className="text-gold text-sm font-medium">Co-Founder & Operations Head</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
