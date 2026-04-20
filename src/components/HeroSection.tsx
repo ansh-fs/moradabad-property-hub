@@ -17,7 +17,7 @@ const HeroSection = () => {
           {/* Left: Text Content */}
           <div className="animate-fade-up">
             <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 text-gold text-sm font-medium mb-6 border border-gold/30">
-              Property Management and Solution
+              Property Solution & Investment
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] leading-tight font-bold text-primary-foreground mb-4">
               Your Trusted Property & Society Management{" "}
@@ -28,7 +28,7 @@ const HeroSection = () => {
             </p>
             <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
               Led by <span className="text-gold font-semibold">Rohit Thakur</span> (Founder & Director) and{" "}
-              <span className="text-gold font-semibold">Hement Thakur</span> (Founder & Director), we help property owners manage, rent, maintain, and grow their property value with professional management services.
+              <span className="text-gold font-semibold">Hemant Thakur</span> (Founder & Director), we help property owners manage, rent, maintain, and grow their property value with professional management services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -77,7 +77,7 @@ const HeroSection = () => {
                     className="relative w-full h-full rounded-full object-cover object-top border-4 border-accent/50 shadow-2xl group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-primary-foreground font-heading font-bold text-lg">Hement Thakur</h3>
+                <h3 className="text-primary-foreground font-heading font-bold text-lg">Hemant Thakur</h3>
                 <p className="text-gold text-sm font-medium">Founder & Director</p>
               </div>
             </div>

@@ -7,14 +7,14 @@ const founders = [
     name: "Rohit Thakur",
     title: "Founder & Director",
     tagline: "Leading with trust and professional property management expertise.",
-    bio: "Rohit Thakur is the Founder & Director of Property Management and Solution. With strong leadership and deep understanding of property management, he focuses on delivering reliable and transparent services to property owners and housing societies. His vision is to simplify property operations and maximize client satisfaction.",
+    bio: "Rohit Thakur is the Founder & Director of Property Solution & Investment. With strong leadership and deep understanding of property management, he focuses on delivering reliable and transparent services to property owners and housing societies. His vision is to simplify property operations and maximize client satisfaction.",
     image: rohitImg,
   },
   {
-    name: "Hement Thakur",
-    title: "Co-Founder & Operations Head",
+    name: "Hemant Thakur",
+    title: "Founder & Director",
     tagline: "Ensuring smooth operations and reliable service delivery.",
-    bio: "Hement Thakur is the Co-Founder & Operations Head of Property Management and Solution. He manages daily operations and ensures timely maintenance and service quality across all managed properties. His commitment to efficiency and customer satisfaction drives the company's strong reputation.",
+    bio: "Hemant Thakur is the Founder & Director of Property Solution & Investment. He manages daily operations and ensures timely maintenance and service quality across all managed properties. His commitment to efficiency and customer satisfaction drives the company's strong reputation.",
     image: hemantImg,
   },
 ];
@@ -27,8 +27,8 @@ const FoundersSection = () => (
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-2">
           Meet Our <span className="text-gradient-gold">Founders</span>
         </h2>
-        <p className="text-muted-foreground text-base max-w-lg mx-auto">
-          Property Management and Solution
+        <p className="text-muted-foreground text-base max-w-lg mx-auto font-bold font-serif">
+          Property Solution & Investment
         </p>
         <p className="text-accent font-medium text-lg mt-1 italic">
           "बनाये अपने निवेश को बेहतर"
