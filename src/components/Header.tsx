@@ -19,12 +19,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container-narrow flex items-center justify-between h-16 md:h-20 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center">
+          <div className="w-10 h-10 gradient-gold flex items-center justify-center mx-px px-[30px] py-[30px] border border-none rounded-xl">
             <span className="font-heading font-bold text-primary-foreground text-lg">PS</span>
           </div>
           <div className="hidden sm:block">
-            <p className="font-heading font-semibold text-foreground text-sm leading-tight">Property Solution</p>
-            <p className="text-xs text-muted-foreground leading-tight">& Investment</p>
+            <p className="text-foreground leading-tight font-bold font-serif text-xl">Property Solution</p>
+            <p className="leading-tight text-xl font-serif font-bold text-foreground">& Investment</p>
           </div>
         </Link>
 
