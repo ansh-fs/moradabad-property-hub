@@ -20,11 +20,20 @@ const FeaturedProperties = () => (
         <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">Explore our handpicked selection of premium properties managed by our expert team.</p>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {properties.map(({ icon: Icon, title, type, status, price, location, beds, area }) => (
+        {properties.map(({ icon: Icon, title, type, status, price, location, beds, area, image }) => (
           <div key={title} className="bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 overflow-hidden group">
-            <div className="h-48 gradient-navy relative flex items-center justify-center">
-              <Icon size={48} className="text-gold/30 group-hover:scale-110 transition-transform" />
-              <span className={`absolute top-3 right-3 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${
+            <div className="h-48 gradient-navy relative flex items-center justify-center overflow-hidden">
+              {image ? (
+                <img
+                  src={image}
+                  alt={title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              ) : (
+                <Icon size={48} className="text-gold/30 group-hover:scale-110 transition-transform" />
+              )}
+              <span className={`absolute top-3 right-3 z-10 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${
                 status === "Featured" ? "bg-accent text-accent-foreground" : status === "Available" ? "bg-green-500 text-white" : "bg-primary-foreground/20 text-primary-foreground"
               }`}>
                 {status}
