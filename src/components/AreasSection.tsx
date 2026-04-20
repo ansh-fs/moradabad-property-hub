@@ -1,8 +1,9 @@
 import { Building2, Home, TrendingUp, MapPin, IndianRupee, Bed } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import skylineImg from "@/assets/property-skyline.jpg";
 
 const properties = [
-  { icon: Building2, title: "Skyline Residency", type: "3 BHK Apartment", status: "Featured", price: "₹45 Lakh", location: "Prime Location", beds: 3, area: "1250 sq.ft" },
+  { icon: Building2, title: "Skyline Residency", type: "3 BHK Apartment", status: "Featured", price: "₹45 Lakh", location: "Prime Location", beds: 3, area: "1250 sq.ft", image: skylineImg },
   { icon: Home, title: "Green Valley Villas", type: "Independent House", status: "Upcoming", price: "₹78 Lakh", location: "Gated Community", beds: 4, area: "2100 sq.ft" },
   { icon: Building2, title: "Royal Heights", type: "2 BHK Flat", status: "Featured", price: "₹32 Lakh", location: "Near Market", beds: 2, area: "980 sq.ft" },
   { icon: Home, title: "Palm Court Society", type: "Society Flats", status: "Upcoming", price: "₹55 Lakh", location: "Premium Society", beds: 3, area: "1450 sq.ft" },
