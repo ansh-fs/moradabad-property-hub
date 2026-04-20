@@ -2,6 +2,7 @@ import { Building2, Home, TrendingUp, MapPin, IndianRupee, Bed } from "lucide-re
 import { Button } from "@/components/ui/button";
 import skylineImg from "@/assets/property-skyline.jpg";
 import greenValleyImg from "@/assets/property-greenvalley.jpg";
+import heritageImg from "@/assets/property-heritage.jpg";
 
 const properties = [
   { icon: Building2, title: "Skyline Residency", type: "3 BHK Apartment", status: "Featured", price: "₹45 Lakh", location: "Prime Location", beds: 3, area: "1250 sq.ft", image: skylineImg },
@@ -9,7 +10,7 @@ const properties = [
   { icon: Building2, title: "Royal Heights", type: "2 BHK Flat", status: "Featured", price: "₹32 Lakh", location: "Near Market", beds: 2, area: "980 sq.ft" },
   { icon: Home, title: "Palm Court Society", type: "Society Flats", status: "Upcoming", price: "₹55 Lakh", location: "Premium Society", beds: 3, area: "1450 sq.ft" },
   { icon: Building2, title: "Sunrise Apartments", type: "2 BHK Apartment", status: "Available", price: "₹28 Lakh", location: "Central Area", beds: 2, area: "900 sq.ft" },
-  { icon: Home, title: "Heritage Homes", type: "3 BHK Villa", status: "Upcoming", price: "₹92 Lakh", location: "Premium Locality", beds: 3, area: "1800 sq.ft" },
+  { icon: Home, title: "Heritage Homes", type: "3 BHK Villa", status: "Upcoming", price: "₹92 Lakh", location: "Premium Locality", beds: 3, area: "1800 sq.ft", image: heritageImg },
 ];
 
 const FeaturedProperties = () => (
