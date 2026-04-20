@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import TrustStrip from "@/components/TrustStrip";
 import ServicesSection from "@/components/ServicesSection";
+import GalleryCarousel from "@/components/GalleryCarousel";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import FeaturedProperties from "@/components/AreasSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -20,6 +21,7 @@ const Index = () => (
     <HeroSection />
     <TrustStrip />
     <ServicesSection />
+    <GalleryCarousel />
     <WhyChooseUs />
     <FeaturedProperties />
     <ProcessSection />
