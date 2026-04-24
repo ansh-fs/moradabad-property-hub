@@ -78,7 +78,7 @@ const Footer = () => (
 
       <div className="mb-12">
         <h4 className="font-heading font-semibold text-primary-foreground mb-2">Visit Our Head Office</h4>
-        <p className="flex items-center gap-2 text-sm text-primary-foreground/70 mb-4">
+        <p className="flex items-center gap-2 mb-4 text-xl text-muted">
           <MapPin size={16} className="text-gold" /> Head Office: Moradabad, Uttar Pradesh
         </p>
         <div className="rounded-xl overflow-hidden border border-primary-foreground/10">
