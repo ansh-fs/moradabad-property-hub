@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import rohitImg from "@/assets/rohit-thakur.png";
 import hemantImg from "@/assets/hemant-thakur.png";
 import heroBg from "@/assets/hero-bg.jpg";
+import { WHATSAPP_URL } from "@/data/contact";
 
 const HeroSection = () => {
   return (
@@ -42,7 +43,7 @@ const HeroSection = () => {
                 size="lg"
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold text-base px-8 py-6"
-                onClick={() => window.open("https://wa.me/91XXXXXXXXXX", "_blank")}
+                onClick={() => window.open(WHATSAPP_URL, "_blank")}
               >
                 <MessageCircle className="mr-2" size={20} />
                 WhatsApp Now
