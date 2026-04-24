@@ -3,8 +3,11 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import LeadForm from "@/components/LeadForm";
+import ContactExperts from "@/components/ContactExperts";
+import WorkingLocations from "@/components/WorkingLocations";
 import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_URL, CONTACTS } from "@/data/contact";
 
 const Contact = () => (
   <div className="min-h-screen">
@@ -34,10 +37,11 @@ const Contact = () => (
             <h2 className="font-heading font-bold text-foreground text-2xl mb-6">Contact Information</h2>
             <div className="space-y-6">
               {[
-                { icon: Phone, title: "Phone", info: "+91 XXXXX XXXXX", action: "tel:+91XXXXXXXXXX" },
-                { icon: MessageCircle, title: "WhatsApp", info: "Chat with us instantly", action: "https://wa.me/91XXXXXXXXXX" },
+                { icon: Phone, title: `Call ${CONTACTS[0].name}`, info: `+91 ${CONTACTS[0].phone}`, action: `tel:+91${CONTACTS[0].phone}` },
+                { icon: Phone, title: `Call ${CONTACTS[1].name}`, info: `+91 ${CONTACTS[1].phone}`, action: `tel:+91${CONTACTS[1].phone}` },
+                { icon: MessageCircle, title: "WhatsApp", info: `+91 ${CONTACTS[2].phone}`, action: WHATSAPP_URL },
                 { icon: Mail, title: "Email", info: "info@propertysolution.com", action: "mailto:info@propertysolution.com" },
-                { icon: MapPin, title: "Office", info: "Uttar Pradesh, India", action: null },
+                { icon: MapPin, title: "Office", info: "Moradabad, Uttar Pradesh, India", action: null },
                 { icon: Clock, title: "Working Hours", info: "Mon - Sat: 9:00 AM - 7:00 PM", action: null },
               ].map(({ icon: Icon, title, info, action }) => (
                 <div key={title} className="flex items-start gap-4 bg-card rounded-xl p-5 border border-border">
@@ -62,7 +66,7 @@ const Contact = () => (
               <Button
                 size="lg"
                 className="w-full bg-[#25D366] text-white font-semibold py-6 hover:bg-[#22c55e] transition-colors"
-                onClick={() => window.open("https://wa.me/91XXXXXXXXXX", "_blank")}
+                onClick={() => window.open(WHATSAPP_URL, "_blank")}
               >
                 <MessageCircle className="mr-2" size={20} />
                 WhatsApp Us Now
