@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LeadForm from "./LeadForm";
+import { WHATSAPP_URL } from "@/data/contact";
 
 const FinalCTA = () => (
   <section id="contact" className="section-padding gradient-navy">
@@ -25,7 +26,7 @@ const FinalCTA = () => (
               size="lg"
               variant="outline"
               className="border-primary-foreground/30 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 font-semibold px-8 py-6"
-              onClick={() => window.open("https://wa.me/91XXXXXXXXXX", "_blank")}
+              onClick={() => window.open(WHATSAPP_URL, "_blank")}
             >
               <MessageCircle className="mr-2" size={20} />
               WhatsApp Now
