@@ -6,6 +6,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { Button } from "@/components/ui/button";
 import { getServiceBySlug, services } from "@/data/services";
+import { CONTACTS } from "@/data/contact";
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -62,7 +63,7 @@ const ServiceDetail = () => {
                 variant="outline"
                 className="border-gold/40 text-gold hover:bg-gold hover:text-primary-foreground px-8"
               >
-                <a href="tel:+919999999999" className="inline-flex items-center gap-2">
+                <a href={`tel:+91${CONTACTS[0].phone}`} className="inline-flex items-center gap-2">
                   <Phone size={16} /> Call Now
                 </a>
               </Button>
