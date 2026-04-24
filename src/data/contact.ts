@@ -8,4 +8,4 @@ export const CONTACTS = [
   { name: "Office WhatsApp", phone: "9639043627", role: "Customer Support", isWhatsApp: true },
 ] as const;
 
-export const LOCATIONS = ["Moradabad", "Ramnagar", "Gurugram", "Noida", "Ghaziabad"];
+export const LOCATIONS = ["Moradabad", "Ramnagar", "Gurugram", "Noida", "Ghaziabad", "Rishikesh", "Haridwar", "Dehradun", "Milak", "Bareilly", "Kashipur"];
