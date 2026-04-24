@@ -77,6 +77,9 @@ const Contact = () => (
       </div>
     </section>
 
+    <ContactExperts />
+    <WorkingLocations />
+
     <section className="section-padding bg-muted/30">
       <div className="container-narrow text-center mb-8">
         <h2 className="font-heading font-bold text-foreground text-2xl md:text-3xl mb-3">Our Office Location</h2>
