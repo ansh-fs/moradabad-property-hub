@@ -45,12 +45,12 @@ const Footer = () => (
           <ul className="space-y-3 text-sm text-primary-foreground/60">
             <li>
               <a href={`tel:+91${CONTACTS[0].phone}`} className="flex items-center gap-2 hover:text-gold transition-colors">
-                <Phone size={16} className="text-gold" /> Hemant: +91 {CONTACTS[0].phone}
+                <Phone size={16} className="text-gold" /> Hemant Thakur: +91 {CONTACTS[0].phone}
               </a>
             </li>
             <li>
               <a href={`tel:+91${CONTACTS[1].phone}`} className="flex items-center gap-2 hover:text-gold transition-colors">
-                <Phone size={16} className="text-gold" /> Rohit: +91 {CONTACTS[1].phone}
+                <Phone size={16} className="text-gold" /> Rohit Thakur: +91 {CONTACTS[1].phone}
               </a>
             </li>
             <li>
