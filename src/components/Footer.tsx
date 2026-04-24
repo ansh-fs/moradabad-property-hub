@@ -77,7 +77,10 @@ const Footer = () => (
       </div>
 
       <div className="mb-12">
-        <h4 className="font-heading font-semibold text-primary-foreground mb-4">Visit Our Office</h4>
+        <h4 className="font-heading font-semibold text-primary-foreground mb-2">Visit Our Head Office</h4>
+        <p className="flex items-center gap-2 text-sm text-primary-foreground/70 mb-4">
+          <MapPin size={16} className="text-gold" /> Head Office: Moradabad, Uttar Pradesh
+        </p>
         <div className="rounded-xl overflow-hidden border border-primary-foreground/10">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.823!2d78.7733!3d28.8386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390afce700000001%3A0x1!2sProperty+Solution+%26+Investment!5e0!3m2!1sen!2sin!4v1700000000000"
@@ -87,7 +90,7 @@ const Footer = () => (
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Property Solution & Investment Office Location"
+            title="Property Solution & Investment Head Office - Moradabad, Uttar Pradesh"
           />
         </div>
       </div>
