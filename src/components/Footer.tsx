@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Users } from "lucide-react";
+import { Phone, Mail, MapPin, Users, MessageCircle } from "lucide-react";
+import { CONTACTS, LOCATIONS, WHATSAPP_URL } from "@/data/contact";
 
 const Footer = () => (
   <footer className="bg-foreground text-primary-foreground">
@@ -40,20 +41,37 @@ const Footer = () => (
         </div>
 
         <div>
-          <h4 className="font-heading font-semibold mb-4">Services</h4>
-          <ul className="space-y-2 text-sm text-primary-foreground/60">
-            {["Society Management", "Rental Management", "Tenant Management", "Property Maintenance", "Flat Sale & Resale"].map((s) => (
-              <li key={s}>{s}</li>
-            ))}
+          <h4 className="font-heading font-semibold mb-4">Contact Us</h4>
+          <ul className="space-y-3 text-sm text-primary-foreground/60">
+            <li>
+              <a href={`tel:+91${CONTACTS[0].phone}`} className="flex items-center gap-2 hover:text-gold transition-colors">
+                <Phone size={16} className="text-gold" /> Hemant: +91 {CONTACTS[0].phone}
+              </a>
+            </li>
+            <li>
+              <a href={`tel:+91${CONTACTS[1].phone}`} className="flex items-center gap-2 hover:text-gold transition-colors">
+                <Phone size={16} className="text-gold" /> Rohit: +91 {CONTACTS[1].phone}
+              </a>
+            </li>
+            <li>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-gold transition-colors">
+                <MessageCircle size={16} className="text-[#25D366]" /> WhatsApp: +91 {CONTACTS[2].phone}
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={16} className="text-gold" /> info@propertysolution.com
+            </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-heading font-semibold mb-4">Contact Us</h4>
-          <ul className="space-y-3 text-sm text-primary-foreground/60">
-            <li className="flex items-center gap-2"><Phone size={16} className="text-gold" /> +91 XXXXX XXXXX</li>
-            <li className="flex items-center gap-2"><Mail size={16} className="text-gold" /> info@propertysolution.com</li>
-            <li className="flex items-start gap-2"><MapPin size={16} className="text-gold mt-0.5" /> Uttar Pradesh, India</li>
+          <h4 className="font-heading font-semibold mb-4">Working Locations</h4>
+          <ul className="space-y-2 text-sm text-primary-foreground/60">
+            {LOCATIONS.map((loc) => (
+              <li key={loc} className="flex items-center gap-2">
+                <MapPin size={14} className="text-gold" /> {loc}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
