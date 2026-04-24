@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useToast } from "@/hooks/use-toast";
 import { getPropertyBySlug } from "@/data/properties";
+import { WHATSAPP_URL, CONTACTS } from "@/data/contact";
 
 const PropertyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -190,12 +191,12 @@ const PropertyDetail = () => {
           </h2>
           <p className="text-primary-foreground/70 mb-6">Talk to our property expert now.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="tel:+919999999999">
+            <a href={`tel:+91${CONTACTS[0].phone}`}>
               <Button size="lg" className="gradient-gold text-primary-foreground font-semibold w-full sm:w-auto">
                 <Phone className="mr-2" size={18} /> Call Now
               </Button>
             </a>
-            <a href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hi, I'm interested in ${property.title}`)}`} target="_blank" rel="noopener noreferrer">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 w-full sm:w-auto">
                 <MessageCircle className="mr-2" size={18} /> WhatsApp Now
               </Button>
@@ -209,12 +210,12 @@ const PropertyDetail = () => {
 
       {/* STICKY MOBILE CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-card border-t border-border p-3 grid grid-cols-2 gap-2 shadow-2xl">
-        <a href="tel:+919999999999">
+        <a href={`tel:+91${CONTACTS[0].phone}`}>
           <Button className="w-full gradient-gold text-primary-foreground font-semibold">
             <Phone className="mr-2" size={16} /> Call Now
           </Button>
         </a>
-        <a href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hi, I'm interested in ${property.title}`)}`} target="_blank" rel="noopener noreferrer">
+        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
           <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold">
             <MessageCircle className="mr-2" size={16} /> WhatsApp
           </Button>

@@ -14,6 +14,8 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import ContactExperts from "@/components/ContactExperts";
+import WorkingLocations from "@/components/WorkingLocations";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -29,6 +31,8 @@ const Index = () => (
     <FoundersSection />
     
     <FAQSection />
+    <WorkingLocations />
+    <ContactExperts />
     <FinalCTA />
     <Footer />
     <FloatingWhatsApp />
