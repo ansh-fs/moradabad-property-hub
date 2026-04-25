@@ -78,12 +78,15 @@ const Footer = () => (
 
       <div className="mb-12">
         <h4 className="font-heading font-semibold text-primary-foreground mb-2">Visit Our Head Office</h4>
-        <p className="flex items-center gap-2 mb-4 text-xl text-muted">
+        <p className="flex items-center gap-2 mb-1 text-xl text-muted">
           <MapPin size={16} className="text-gold" /> Head Office: Moradabad, Uttar Pradesh - 244001
+        </p>
+        <p className="flex items-center gap-2 mb-4 text-sm text-primary-foreground/50">
+          <MapPin size={16} className="text-gold" /> Coordinates: 28.835166, 78.737363
         </p>
         <div className="rounded-xl overflow-hidden border border-primary-foreground/10">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.823!2d78.7733!3d28.8386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390afce700000001%3A0x1!2sProperty+Solution+%26+Investment!5e0!3m2!1sen!2sin!4v1700000000000"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3494.823!2d78.73736!3d28.83517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDUwJzA2LjYiTiA3OMKwNDQnMTQuNSJF!5e0!3m2!1sen!2sin!4v1700000000000"
             width="100%"
             height="300"
             style={{ border: 0 }}
