@@ -35,7 +35,7 @@ export const properties: Property[] = [
     price: "Contact for Price",
     location: "Nawadiya Road, Milak",
     beds: 0,
-    area: "Plots Available",
+    area: "Plots Completed",
     cover: skylineImg,
     gallery: [skylineImg, ...baseGallery],
     parking: "Available",
