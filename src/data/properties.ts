@@ -12,7 +12,7 @@ export interface Property {
   slug: string;
   title: string;
   type: string;
-  status: "Featured" | "Upcoming" | "Available";
+  status: "Featured" | "Upcoming" | "Available" | "Completed";
   price: string;
   location: string;
   beds: number;
