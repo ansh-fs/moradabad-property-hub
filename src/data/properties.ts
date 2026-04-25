@@ -2,8 +2,6 @@ import skylineImg from "@/assets/property-skyline.jpg";
 import greenValleyImg from "@/assets/property-greenvalley.jpg";
 import heritageImg from "@/assets/property-heritage.jpg";
 import gallery1 from "@/assets/gallery-building.jpg";
-import gallery2 from "@/assets/gallery-painting.jpg";
-import gallery3 from "@/assets/gallery-maintenance.jpg";
 import gallery4 from "@/assets/gallery-security.jpg";
 import gallery5 from "@/assets/gallery-cleaning.jpg";
 import gallery6 from "@/assets/gallery-inspection.jpg";
