@@ -32,7 +32,9 @@ const FeaturedProperties = () => (
                   <Icon size={48} className="text-gold/30 group-hover:scale-110 transition-transform" />
                 )}
                 <span className={`absolute top-3 right-3 z-10 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${
-                  status === "Featured" ? "bg-accent text-accent-foreground" : status === "Available" ? "bg-green-500 text-white" : "bg-primary-foreground/20 text-primary-foreground"
+                  status === "Completed" ? "bg-gold text-navy" : 
+                  status === "Available" ? "bg-green-500 text-white" : 
+                  status === "Featured" ? "bg-accent text-accent-foreground" : "bg-primary-foreground/20 text-primary-foreground"
                 }`}>
                   {status}
                 </span>
