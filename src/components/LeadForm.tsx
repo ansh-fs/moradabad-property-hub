@@ -28,13 +28,14 @@ const LeadForm = ({ variant = "hero" }: LeadFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) {
-      toast({ title: "Please fill in your name and phone number", variant: "destructive" });
+      toast({
+        title: "Please fill in your name and phone number",
+        variant: "destructive",
+      });
       return;
     }
 
     setIsSubmitting(true);
-
-    // Step 1: Save to Google Sheets
     try {
       fetch(SHEETS_WEB_APP_URL, {
         method: "POST",
@@ -48,28 +49,20 @@ const LeadForm = ({ variant = "hero" }: LeadFormProps) => {
           service: formData.service || "Not specified",
         }),
       });
+
+      toast({
+        title: "Thank you! We'll contact you shortly.",
+        description: "Our team will reach out within 24 hours.",
+      });
+      setFormData({ name: "", phone: "", propertyType: "", area: "", service: "" });
     } catch (err) {
-      console.log("Sheet error", err);
+      toast({
+        title: "Something went wrong. Please call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
-    // Step 2: Open WhatsApp using wa.me (NOT api.whatsapp.com)
-    const message = `New Lead from Website!
-Name: ${formData.name}
-Phone: ${formData.phone}
-Property Type: ${formData.propertyType || "Not specified"}
-Area: ${formData.area || "Not specified"}
-Service: ${formData.service || "Not specified"}`;
-
-    const whatsappURL = `https://wa.me/919639043627?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, "_blank");
-
-    // Step 3: Show success and reset
-    toast({
-      title: "Thank you! Redirecting to WhatsApp...",
-      description: "Our team will contact you shortly.",
-    });
-    setFormData({ name: "", phone: "", propertyType: "", area: "", service: "" });
-    setIsSubmitting(false);
   };
 
   const isHero = variant === "hero";
