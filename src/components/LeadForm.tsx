@@ -95,8 +95,8 @@ const LeadForm = ({ variant = "hero" }: LeadFormProps) => {
           {services.map((s) => <SelectItem key={s} value={s}>{s}</SelectItem>)}
         </SelectContent>
       </Select>
-      <Button type="submit" className="w-full gradient-gold text-primary-foreground font-semibold text-base py-6 hover:opacity-90 transition-opacity">
-        Book Free Consultation
+      <Button type="submit" disabled={isSubmitting} className="w-full gradient-gold text-primary-foreground font-semibold text-base py-6 hover:opacity-90 transition-opacity">
+        {isSubmitting ? "Submitting..." : "Book Free Consultation"}
       </Button>
     </form>
   );
