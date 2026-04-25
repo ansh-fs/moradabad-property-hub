@@ -33,7 +33,7 @@ export const properties: Property[] = [
     slug: "shri-hari-vatika",
     title: "Shri Hari Vatika",
     type: "Residential Plots",
-    status: "Featured",
+    status: "Completed",
     price: "Contact for Price",
     location: "Nawadiya Road, Milak",
     beds: 0,
