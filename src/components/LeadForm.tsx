@@ -33,30 +33,43 @@ const LeadForm = ({ variant = "hero" }: LeadFormProps) => {
     }
 
     setIsSubmitting(true);
+
+    // Step 1: Save to Google Sheets
     try {
-      await fetch(SHEETS_WEB_APP_URL, {
+      fetch(SHEETS_WEB_APP_URL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
-          propertyType: formData.propertyType,
-          area: formData.area,
-          service: formData.service,
+          propertyType: formData.propertyType || "Not specified",
+          area: formData.area || "Not specified",
+          service: formData.service || "Not specified",
         }),
       });
-
-      const whatsappUrl = `https://wa.me/919639043627?text=New Lead from Website!%0AName: ${formData.name}%0APhone: ${formData.phone}%0AProperty Type: ${formData.propertyType}%0AArea: ${formData.area}%0AService: ${formData.service}`;
-      window.open(whatsappUrl, "_blank");
-
-      toast({ title: "Thank you! We'll contact you shortly.", description: "Our team will reach out within 24 hours." });
-      setFormData({ name: "", phone: "", propertyType: "", area: "", service: "" });
     } catch (err) {
-      toast({ title: "Submission failed", description: "Please try again or contact us directly.", variant: "destructive" });
-    } finally {
-      setIsSubmitting(false);
+      console.log("Sheet error", err);
     }
+
+    // Step 2: Open WhatsApp using wa.me (NOT api.whatsapp.com)
+    const message = `New Lead from Website!
+Name: ${formData.name}
+Phone: ${formData.phone}
+Property Type: ${formData.propertyType || "Not specified"}
+Area: ${formData.area || "Not specified"}
+Service: ${formData.service || "Not specified"}`;
+
+    const whatsappURL = `https://wa.me/919639043627?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+
+    // Step 3: Show success and reset
+    toast({
+      title: "Thank you! Redirecting to WhatsApp...",
+      description: "Our team will contact you shortly.",
+    });
+    setFormData({ name: "", phone: "", propertyType: "", area: "", service: "" });
+    setIsSubmitting(false);
   };
 
   const isHero = variant === "hero";
