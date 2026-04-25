@@ -32,7 +32,9 @@ const FeaturedProperties = () => (
                   <Icon size={48} className="text-gold/30 group-hover:scale-110 transition-transform" />
                 )}
                 <span className={`absolute top-3 right-3 z-10 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${
-                  status === "Featured" ? "bg-accent text-accent-foreground" : status === "Available" ? "bg-green-500 text-white" : "bg-primary-foreground/20 text-primary-foreground"
+                  status === "Completed" ? "bg-gold text-navy" : 
+                  status === "Available" ? "bg-green-500 text-white" : 
+                  status === "Featured" ? "bg-accent text-accent-foreground" : "bg-primary-foreground/20 text-primary-foreground"
                 }`}>
                   {status}
                 </span>
@@ -42,7 +44,7 @@ const FeaturedProperties = () => (
                 <p className="text-muted-foreground text-sm mb-3">{type}</p>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
                   <span className="flex items-center gap-1"><MapPin size={12} /> {location}</span>
-                  <span className="flex items-center gap-1"><Bed size={12} /> {beds} Beds</span>
+                  {beds > 0 && <span className="flex items-center gap-1"><Bed size={12} /> {beds} Beds</span>}
                 </div>
                 <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
                   <Home size={12} /> {area}
