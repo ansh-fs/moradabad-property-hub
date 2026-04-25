@@ -24,7 +24,7 @@ export interface Property {
   description: string;
 }
 
-const baseGallery = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
+const baseGallery = [gallery1, gallery4, gallery5, gallery6];
 
 export const properties: Property[] = [
   {
