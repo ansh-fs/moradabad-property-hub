@@ -4,8 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
-const propertyTypes = ["Flat/Apartment", "Independent House", "Society", "Commercial", "Plot/Land"];
-const areas = ["City Center", "Residential Colony", "Gated Society", "Industrial Area", "Suburban", "Other"];
+const propertyTypes = ["Residential Plot", "Flat/Apartment", "Independent House/Villa", "Commercial Shop", "Agricultural Land", "Society Flat", "Other"];
+const areas = ["Moradabad City", "Katghar", "Civil Lines", "Ram Ganga Vihar", "Buddhi Vihar", "Kanth Road", "Delhi Road", "Pakbara", "Milak (Rampur)", "Ramnagar", "Bareilly Road", "Other"];
 const services = ["Society Management", "Rental Management", "Tenant Management", "Property Maintenance", "Flat Sale/Resale", "Rent Collection", "Other"];
 
 interface LeadFormProps {
