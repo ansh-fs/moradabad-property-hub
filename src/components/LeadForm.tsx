@@ -12,8 +12,11 @@ interface LeadFormProps {
   variant?: "hero" | "footer";
 }
 
+const SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx3wLIM7RRp0FER9rywMDYK3BW0TxcNikZ9gW3C5bw5W0Gn0sKCmXHXOciI86nntPNc/exec";
+
 const LeadForm = ({ variant = "hero" }: LeadFormProps) => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -22,14 +25,38 @@ const LeadForm = ({ variant = "hero" }: LeadFormProps) => {
     service: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) {
       toast({ title: "Please fill in your name and phone number", variant: "destructive" });
       return;
     }
-    toast({ title: "Thank you! We'll contact you shortly.", description: "Our team will reach out within 24 hours." });
-    setFormData({ name: "", phone: "", propertyType: "", area: "", service: "" });
+
+    setIsSubmitting(true);
+    try {
+      await fetch(SHEETS_WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          propertyType: formData.propertyType,
+          area: formData.area,
+          service: formData.service,
+        }),
+      });
+
+      const whatsappUrl = `https://wa.me/919639043627?text=New Lead from Website!%0AName: ${formData.name}%0APhone: ${formData.phone}%0AProperty Type: ${formData.propertyType}%0AArea: ${formData.area}%0AService: ${formData.service}`;
+      window.open(whatsappUrl, "_blank");
+
+      toast({ title: "Thank you! We'll contact you shortly.", description: "Our team will reach out within 24 hours." });
+      setFormData({ name: "", phone: "", propertyType: "", area: "", service: "" });
+    } catch (err) {
+      toast({ title: "Submission failed", description: "Please try again or contact us directly.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const isHero = variant === "hero";
